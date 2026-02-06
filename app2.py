@@ -181,7 +181,7 @@ def plot_line(
                     )
                 )
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
     else:
         fig, ax = plt.subplots(figsize=(8, 4))
         ax.plot(x, y, marker="o")
@@ -259,7 +259,7 @@ def plot_multi_line(
                     )
                 )
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
     else:
         fig, ax = plt.subplots(figsize=(8, 4))
         for name, (x, y) in series_dict.items():
@@ -307,7 +307,7 @@ def plot_bar(x, y, title: str, x_label: str, y_label: str, orientation: str = "v
             margin=dict(l=10, r=10, t=40, b=10),
             height=340,
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
     else:
         fig, ax = plt.subplots(figsize=(8, 4))
         if orientation == "v":
@@ -342,7 +342,7 @@ def plot_heatmap(
         if yticks is not None:
             fig.update_yaxes(tickmode="array", tickvals=list(yticks))
         fig.update_layout(title=title, margin=dict(l=10, r=10, t=40, b=10), height=360)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
     else:
         fig, ax = plt.subplots(figsize=(10, 4))
         sns.heatmap(df, cmap=colorscale, ax=ax)
@@ -832,7 +832,7 @@ with tab_correlation:
                 height=320,
                 margin=dict(l=10, r=10, t=40, b=10),
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
         else:
             fig, ax = plt.subplots(figsize=(8, 4))
             arrest_hour.plot(kind="bar", stacked=True, color=["#AED6F1", "#2E86C1"], ax=ax)
@@ -861,7 +861,7 @@ with tab_correlation:
                 height=320,
                 margin=dict(l=10, r=10, t=40, b=10),
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
         else:
             fig, ax = plt.subplots(figsize=(8, 4))
             arrest_district.plot(kind="bar", stacked=True, color=["#AED6F1", "#2E86C1"], ax=ax)
