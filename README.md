@@ -1,6 +1,6 @@
-# Chicago Crime Dashboard (app2.py)
+# Chicago Crime Dashboard (dashboard.py)
 
-app.py reads local CSV files, while app2.py reads the same datasets from remote storage URLs (S3). Everything else is the same.
+
 
 **Sidebar Filters**
 - `Dataset`: Choose the dataset scope.
